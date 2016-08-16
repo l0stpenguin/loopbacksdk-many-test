@@ -1,0 +1,25 @@
+{
+  "name": "Company",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "eboardUsers": {
+      "type": "hasMany",
+      "model": "EboardUser",
+      "foreignKey": "idCompany",
+      "through": "CompanyUser"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

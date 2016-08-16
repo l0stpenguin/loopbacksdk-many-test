@@ -1,0 +1,26 @@
+{
+    "name": "EboardUser",
+    "base": "User",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "required": true
+        }
+    },
+    "validations": [],
+    "relations": {
+        "companies": {
+            "type": "hasMany",
+            "model": "Company",
+            "foreignKey": "idUser",
+            "through": "CompanyUser"
+        }
+    },
+    "acls": [],
+
+    "methods": []
+}

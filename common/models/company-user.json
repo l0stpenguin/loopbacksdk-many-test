@@ -1,0 +1,28 @@
+{
+    "name": "CompanyUser",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "isActive": {
+            "type": "boolean"
+        }
+    },
+    "validations": [],
+    "relations": {
+        "company": {
+            "type": "belongsTo",
+            "model": "Company",
+            "foreignKey": "idCompany"
+        },
+        "user": {
+            "type": "belongsTo",
+            "model": "EboardUser",
+            "foreignKey": "idUser"
+        }
+    },
+    "acls": [],
+    "methods": []
+}
